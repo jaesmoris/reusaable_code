@@ -5,14 +5,13 @@ import numpy as np
 def flood_fill4_rec(field: np.ndarray, x: int, y: int,
                     old_value: int | float,
                     new_value: int | float) -> None:
-    """Implements the recursive flood filling algorithm
-    with a 4-connection.
+    """Implements the recursive 4-connection flood filling algorithm.
 
     Args:
         field (np.ndarray): image
         x (int): row index of the current position
         y (int): column index of the current position
-        old_value (int | float): value wanted to be changed
+        old_value (int | float): value to be changed
         new_value (int | float): new value for the cells with old values
     """
     # Checking if x and y are valid indices
@@ -35,7 +34,7 @@ def flood_fill4_rec(field: np.ndarray, x: int, y: int,
 def flood_fill4_iter(field: np.ndarray, x: int, y: int,
                      old_value: int | float,
                      new_value: int | float) -> None:
-    """Implements the iterative flood filling algorithm with a 4-connection
+    """Implements the iterative 4-connection flood filling algorithm
     using a stack, for saving all the pixels to be changed, and a matrix of
     visits, to avoid inserting again a pixel.
 
@@ -43,7 +42,7 @@ def flood_fill4_iter(field: np.ndarray, x: int, y: int,
         field (np.ndarray): image
         x (int): row index of the current position
         y (int): column index of the current position
-        old_value (int | float): value wanted to be changed
+        old_value (int | float): value to be changed
         new_value (int | float): new value for the cells with old values
     """
     # Checking if x and y are valid indices
